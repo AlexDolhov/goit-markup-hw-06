@@ -734,15 +734,13 @@ body {
 /* Modal formfield */
 
 .modal-form {
-  /* position: relative; */
-
   width: 100%;
 }
 
 .modal-title {
   display: block;
 
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 
   font-weight: 700;
   font-size: 20px;
@@ -753,55 +751,11 @@ body {
   color: var(--title-color);
 }
 
-.modal-field {
-  position: relative;
-  display: block;
-  margin-bottom: 28px;
-  cursor: pointer;
-}
-
-.modal-input {
-  display: block;
-  width: 100%;
-
-  padding: 11px 12px;
-  padding-left: 42px;
-
-  /* margin-top: 4px; */
-
-  /* font-family: "Roboto"; */
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
-  border: 1px solid var(--input-border-color);
-  border-radius: 4px;
-
-  cursor: pointer;
-
-  transition: border-color var(--anim-time) var(--anim-time-line);
-}
-
-.modal-field:focus-within > .modal-input {
-  outline: none;
-  border-color: var(--accent-color);
-}
-
-/* .modal-field:hover > .modal-input,
-.modal-field:focus > .modal-input {
-  border-color: var(--accent-color);
-} */
-
-.modal-label {
-  position: absolute;
-
-  bottom: 100%;
-  left: 0;
-
-  /* transform  : translateY(-4px); */
+.input-label {
   display: block;
   margin-bottom: 4px;
+
+  cursor: pointer;
 
   font-weight: 400;
   font-size: 12px;
@@ -810,8 +764,39 @@ body {
 
   color: var(--text-color);
 }
+.input-wrap {
+  position: relative;
 
-.modal-field .icon {
+  margin-bottom: 10px;
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+
+  padding: 11px 12px;
+  padding-left: 42px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+
+  outline: none;
+
+  cursor: pointer;
+
+  transition: border-color var(--anim-time) var(--anim-time-line);
+}
+
+.input-wrap:focus-within > .form-input {
+  border-color: var(--accent-color);
+}
+
+.input-wrap .icon {
   position: absolute;
 
   bottom: 50%;
@@ -823,18 +808,11 @@ body {
   transition: fill var(--anim-time) var(--anim-time-line);
 }
 
-.modal-field:focus-within > .icon {
+.input-wrap:focus-within > .icon {
   fill: var(--accent-color);
 }
 
-.modal-comment {
-  position: relative;
-
-  display: block;
-  margin-bottom: 20px;
-}
-
-.comment-input {
+.input-comment {
   display: block;
 
   width: 100%;
@@ -851,15 +829,15 @@ body {
   transition: border-color var(--anim-time) var(--anim-time-line);
 }
 
-.comment-input::placeholder {
+.input-comment::placeholder {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.01em;
   color: var(--placeholder-color);
 }
-.modal-comment:focus-within > .comment-input {
-  outline: none;
-  border-color: var(--accent-color);
+
+.comment-wrap {
+  margin-bottom: 20px;
 }
 
 /* Modal agreement checkbox*/
